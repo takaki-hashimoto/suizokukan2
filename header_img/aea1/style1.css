@@ -1,0 +1,611 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  */
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.5rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+a,
+p {
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    font-family: 'Yu Gothic UI',sans-serif;
+}
+
+section {
+    padding: 80px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+}
+
+img{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+
+main{
+    padding-top: 20vh;
+}
+
+/* Header */
+
+a {
+    font-size:2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #004384;
+    text-shadow: 1px 1px 2px #FFF;
+}
+
+header {
+    width: 100%;
+    height: 30vh;
+    position: fixed;
+    z-index: 999;
+}
+
+.header_box {    
+    width: 100%;
+    height: 10vh;
+    background-color: #72B8FF;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.header_return_to_top {
+    display: block;
+    width: 10%;
+    transform: translateY(10px);
+    transition: all 0.5s;
+}
+
+.header_return_to_top img{
+    display: block;
+    width: 50%;
+    height: 0%;
+    object-fit: contain;
+    margin: 0 auto;
+    margin-bottom: -10%;
+}
+
+nav ul {
+    list-style-type: none;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(10px);
+    transition: all 0.5s;
+
+}
+
+.header_link img {
+    width: 40%;
+    height: 0%;
+    object-fit: contain;
+}
+
+.header_return_to_top:hover,
+.header_link:hover,
+.go_to_top {
+    transform: translateY(0);
+}
+
+.header_mokomoko {
+    width: 100%;
+    height: 20vh;
+    background-image: url(./kumo/header3\ \(1\).png);
+    background-size: 10%;
+    background-repeat: repeat-x;
+}
+
+.top_btn{
+    position: relative;
+}
+
+.top_btn{
+    transform: translateY(10px);
+    transition: all 0.5s;
+}
+
+.top_btn .go_to_top img:hover {
+    animation: bounce 0.8s ease-out;
+}
+
+@keyframes bounce {
+    0%    { transform:translate(0, 0); }
+    16.6% { transform:translate(0, -20px); animation-timing-function:ease-in; }
+    33.3% { transform:translate(0, 0); }
+    49.8% { transform:translate(0, -14px); animation-timing-function:ease-in; }
+    66.4% { transform:translate(0, 0); }
+    83%   { transform:translate(0, -4px); animation-timing-function:ease-in; }
+    100%  { transform:translate(0, 0); }
+}
+
+.go_to_top img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    position: absolute;
+    right: 2%;
+    bottom: -420px;
+}
+
+@media screen and (max-width:1025px) {
+    header {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .header_box {    
+        width: 100%;
+        height: 15vh;
+        background-color: #72B8FF;
+    }
+
+    .header_mokomoko {
+        height: 15vh;
+        background-size: 20%;
+    }
+
+    .header_return_to_top {
+        width: 25%;
+    }
+
+    nav ul {
+        width: 75%;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+}
+
+/* Main */
+
+.section_main{
+    margin-bottom: -150px;
+}
+
+.section_main h3, p{
+    text-align: center;
+}
+.main_text{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-image: url(./kumo/kumobg2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 10px 20px 0 20px;
+    margin-bottom: 80px;
+    margin-left: 80px;
+}
+
+.main_text h2{
+    padding-top: 100px;
+    padding-right: 25px;
+}
+
+.main_text img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 800px;
+    bottom: 400px;
+}
+
+/* White dolphin */
+
+.illust1{
+    margin-top: 470px;
+    overflow: hidden;
+}
+
+.main_text {
+    position: relative;
+    height: 100vh;
+}
+
+.illust1 {
+    position: absolute;
+    bottom: 0;
+    animation: fall 2s ease-in-out forwards;
+}
+
+@keyframes fall {
+    to {
+        bottom: 110%;
+    }
+}
+
+.text_area{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    top: -300px;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5em;
+    text-decoration-color: #72B8ff;
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+}
+
+
+.section_dolphin h2{
+    margin-bottom: 48px;
+}
+
+.section_dolphin h3 {
+    margin-bottom: 24px;
+    line-height: 2;
+}
+
+.dolphin_title1 {
+    width: 500px;
+    height: 500px;
+    background-image: url(./kumo/kumobg2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 80px 100px 0 100px;
+    color: white;
+    margin-bottom: -100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.dolphin_box{
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.dolphin_box img{
+    position: relative;
+}
+
+.bell1{
+    border-radius: 72% 28% 65% 35% / 45% 56% 44% 55% ;
+    top: 150px;
+}
+
+.bell2{
+    border-radius: 63% 37% 72% 28% / 59% 31% 69% 41% ;
+    top: 50px;
+    right: 50px;
+}
+
+.bell3{
+    border-radius: 28% 72% 73% 27% / 31% 71% 29% 69% ;
+    top: 300px;
+    right: 320px;
+}
+
+.bell4{
+    border-radius: 51% 49% 46% 54% / 53% 42% 58% 47% ;
+    top: 150px;
+    right: 420px;
+}
+
+.bell5{
+    top: -100px;
+}
+
+.bell_content{
+    position: relative;
+}
+
+.bell_textarea{
+    width: 500px;
+    margin-left: -380px;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5em;
+    text-decoration-color: #72B8ff;
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+}
+
+
+.illust2{
+    width: 100%;
+    background-color: #72B8ff;
+    margin-top: -200px;
+}
+
+.dolphin{
+    position: relative;
+    animation-name: dolphin_swim;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+@keyframes dolphin_swim {
+    0% {
+        transform: translateY(0) translateX(0);
+        left: 80%;
+    }
+    20% {
+        transform: translateY(-40px) translateX(-60px);
+    }
+    40% {
+        transform: translateY(0px) translateX(-60px);
+    }
+    60% {
+        transform: translateY(40px) translateX(-100px);
+    }
+    80% {
+        transform: translateY(0px) translateX(-60px);
+    }
+    90% {
+        transform: translateY(-20px) translateX(-100px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+        left: -25%;
+    }
+}
+
+.dolphin_2{
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+    right: 200px;
+    bottom: 20px;
+    z-index: 2;
+}
+
+.dolphin_3{
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+    right: 100px;
+}
+
+.dolphin_4{
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+    bottom: 10px;
+    z-index: 2;
+}
+
+.dolphin_5{
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+    bottom: 30px;
+}
+
+.illust3 img{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 100px;
+}
+
+/* dolphin */
+
+.section_dolphin{
+    padding-top: -300px;
+}
+
+.dolphin_title2{
+    width: 500px;
+    height: 500px;
+    background-image: url(./kumo/kumobg2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 110px 100px 0 100px;
+    color: white;
+    margin-bottom: -100px;
+    margin-left: 100px;
+}
+
+.dolphin_box{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dolphin_box img{
+    position: relative;
+}
+
+.dolphin1{
+    top: 70px;
+    border-radius: 60% 40% 70% 30% / 45% 52% 48% 55% ;
+}
+
+.dolphin2{
+    left: 100px;
+    bottom: 100px;
+    border-radius: 38% 62% 37% 63% / 63% 33% 67% 37% ;
+}
+
+.dolphin3{
+    left: 370px;
+    top: 200px;
+    border-radius: 38% 62% 65% 35% / 32% 71% 29% 68% ;
+    z-index: 1;
+}
+
+.dolphin4{
+    left: 450px;
+    top: 80px;
+    border-radius: 44% 56% 53% 47% / 56% 52% 48% 44% ;
+}
+
+.dolphin_textarea {
+    width: 500px;
+    line-height: 2;
+    margin-bottom: 24px;
+    position: relative;
+    left: 400px;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5em;
+    text-decoration-color: #72B8ff;
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+}
+
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.illust4{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 100px;
+    margin-left: 50px;
+    
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #72B8FF;
+    text-align: center;
+}
+
+small {
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+  /* <!-- 波の設定 --> */
+  svg {
+    height: 40vh;
+    width: 100%;
+    margin-bottom: -50px;
+  }
+  
+
+
+  @media only screen and (max-width: 480px) {
+    html {
+      font-size: 50%; 
+    }
+    body {
+        width: 100%;
+    }
+    section {
+      padding: 40px 0; 
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    h3 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1.6rem;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .main_text {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .main_text h2 {
+      padding-top: 60px;
+      padding-right: 15px;
+    }
+  
+    .main_text img {
+      left: 0;
+      bottom: 0;
+    }
+  
+    .text_area {
+      width: 100%;
+      top: -150px;
+    }
+  
+    .illust2 {
+      margin-top: -100px;
+    }
+  
+    .illust3 img {
+      margin-top: 50px;
+    }
+  
+    .illust4 {
+      margin-top: 50px;
+      margin-left: 0;
+    }
+  }        
+
+  @media screen and (max-width: 480px) {
+    .nav li {
+      float: none;
+      width: 100%;
+    }
+    .nav li {
+      display: block;
+    }
+    .nav {
+      display: none;
+    }
+  }
+  
