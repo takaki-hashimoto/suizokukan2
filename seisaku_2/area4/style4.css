@@ -1,0 +1,814 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: bottom;
+}
+
+/* 共通 */
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: 'Yu Gothic UI','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+    letter-spacing: 0.1em;
+}
+
+
+p {
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.5rem;
+    line-height: 2;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+a {
+    font-size:2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #004384;
+    text-shadow: 1px 1px 2px #FFF;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 30vh;
+    position: fixed;
+    z-index: 999;
+}
+
+/* ヘッダーが出たり消えたり */
+.fadeout_h {
+    animation: fadeout_h 0.5s ease forwards;
+    opacity: 0;
+    top: -100%;
+    transition: all 0.5s;
+  }
+  
+  @keyframes fadeout_h {
+    0% {
+      top: 0;
+      opacity: 1;
+    }
+  
+    100% {
+      top: -100%;
+      opacity: 0;
+    }
+  }
+  
+  .fadein_h {
+    animation: fadein_h 0.5s ease forwards;
+    opacity: 1;
+    top: 0;
+    transition: all 0.5s;
+  }
+  
+  @keyframes fadein_h {
+    0% {
+      top: -100%;
+      opacity: 0;
+    }
+  
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+
+.header_box {    
+    width: 100%;
+    height: 10vh;
+    background-color: #72B8FF;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.aquarium_logo {
+    position: absolute;
+    left: 0.9%;
+    top: 0;
+    z-index: 999999;
+    transform: translateY(10px);
+    transition: all 0.5s;
+  }
+  
+  .aquarium_logo a img {
+    height: 23.5vh;
+    object-fit: contain;
+  }
+
+
+nav ul {
+    list-style-type: none;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(10px);
+    transition: all 0.5s;
+}
+
+.header_link img {
+    width: 40%;
+}
+
+.aquarium_logo:hover,
+.header_link:hover {
+    transform: translateY(0);
+}
+
+.header_mokomoko {
+    width: 100%;
+    height: 20vh;
+    background-image: url(../area_guide_img/header3.png);
+    background-size: 10%;
+    background-repeat: repeat-x;
+}
+
+@media screen and (max-width:1025px) {
+    header {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .header_box {    
+        width: 100%;
+        height: 15vh;
+        background-color: #72B8FF;
+    }
+
+    .header_mokomoko {
+        height: 15vh;
+        background-size: 20%;
+    }
+
+    .header_return_to_top {
+        width: 25%;
+    }
+
+    nav ul {
+        width: 75%;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+}
+
+/* 上に戻る */
+/* topbutton */
+
+.topbutton {
+    position: fixed;
+    right: 2%;
+    bottom: 12%;
+    z-index: 999;
+}
+.topbutton img {
+    width: 80px;
+}
+
+@media screen and (min-width:1025px) {
+    .topbutton:hover img{
+        animation: poyooon 0.5s ease-out;
+    }
+
+      @keyframes poyooon {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-20px);
+                animation-timing-function: ease-in;
+            }
+            50% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(-10px);
+                animation-timing-function: ease-in;
+            }
+            100% {
+                transform: translateY(0);
+            }                                                    
+        }
+}
+
+/* main */
+main {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20vh;
+}
+
+@media screen and (min-width:1025px) {
+    main {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 30vh;
+    }
+}
+
+/* 最初の説明 */
+/* section_first */
+
+.section_first_top {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 40px;
+}
+
+.section_first_title {
+    width: 330px;
+    height: 220px;
+    background: url(../area_guide_img/kumototal.png);
+    background-size: cover;
+    filter: drop-shadow(0px 0px 6px #777777);
+    text-align: center;
+    position: relative;
+}
+
+.section_first_title h2 {
+    color: #004384;
+    text-shadow: 2px 2px 2px #72B8FF;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+}
+
+.section_first_title h4 {
+    color: #004384;
+    text-shadow: 2px 2px 2px #72B8FF;
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+}
+
+.section_first_illust {
+    width: 100%;
+    height: auto;
+    background: url(../area_guide_img/hokkaido/map-hokkaido.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.section_first_salmon {
+    width: 100%;
+}
+
+.section_first_water {
+    display: none;
+}
+
+.section_first p {
+    font-weight: bold;
+    text-decoration: underline #72B8FF;
+}
+
+@media screen and (min-width:480px) and (max-width:1024px) {
+    .section_first_top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .section_first_title {
+        width: 100%;
+        height: 30vw;
+        background: url(../area_guide_img/kumototal.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: drop-shadow(0px 0px 6px #777777);
+        text-align: center;
+        position: relative;
+    }
+
+    .section_first_illust {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1025px) {    
+    .section_first_top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .section_first_title {
+        width: 480px;
+        height: 280px;
+        background: url(../area_guide_img/kumototal.png);
+        background-size: cover;
+        background-position: center;
+        filter: drop-shadow(0px 0px 6px #777777);
+        text-align: center;
+        position: relative;
+    }
+
+    .section_first_title h2 {
+        font-size: 4rem;
+    }
+
+    .section_first_title h4 {
+        font-size: 3rem;
+    }
+
+    .section_first_illust {
+        display: block;
+        width: 50%;
+        height: 50vh;
+        position: relative;
+    }
+    
+    .section_first_salmon {
+        width: 80%;
+        height: auto;
+        overflow: visible;
+        transform: translateX(-10%) translateY(100px);
+        position: absolute;
+        top: 0;
+        right: -80px;
+        opacity: 1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-name: animation_salmon;
+    }
+
+    @keyframes animation_salmon {
+        0% {
+            opacity: 0;
+            transform: translateX(-10%) rotate(-10deg) translateY(100px);
+        }
+        30% {
+            opacity: 0.5;
+        }
+        80% {
+            transform: translateX(-10%) rotate(30deg) translateY(-100px);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(-10%) rotate(0deg) translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .section_first_water {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-name: animation_water;
+    }
+
+    @keyframes animation_water {
+        0% {
+            opacity: 1;
+            transform: translateY(-50px) scale(0.1,0.1) rotate(180deg);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(100px) scale(1,1) rotate(180deg);
+        }
+    }
+
+}
+
+/* セクション区切り */
+/* section_divide */
+.section_divide {
+    margin-top: -90px;
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.section_divide_background {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.kaisou1 {
+    width: 50%;
+}
+
+.kaisou2 {
+    width: 50%;
+}
+
+.section_divide_animals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.flounder {
+    width: 40%;
+    transform: scale(-1,1) translateY(50px);
+}
+
+.octopus {
+    width: 50%;
+    transform: scale(-1,1);
+}
+
+@media screen and (min-width:1025px) {
+    .section_divide {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 80px;
+    }
+
+    .section_divide_background {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .kaisou {
+        display: block;
+        width: 240px;
+        height: auto;
+    }
+
+    .kaisou2 {
+        width: 280px;
+        transform: translateY(-60px);
+    }
+
+    .section_divide_animals {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        transform:scale(-1,1);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .octopus {
+        width: 25%;
+        margin-left: 80px;
+        opacity: 0;
+    }
+
+    .flounder {
+        width: 35%;
+        opacity: 0;
+    }
+
+    .fadein {
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: animation_animals;
+    }
+
+    @keyframes animation_animals {
+        0% {
+            transform: translateY(50px) scale(-1,1);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0) scale(-1,1);
+            opacity: 1;
+        }
+    }
+}
+
+/* エリアガイド共通 */
+/* section_polarbear */
+/* section_animal */
+.section_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.section_imgs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section_imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section_img1 {
+    border-radius: 54% 46% 59% 41% / 54% 54% 46% 46% ;
+    object-position: right bottom;
+}
+
+.section_img2 {
+    border-radius: 70% 30% 74% 26% / 74% 68% 32% 26% ;
+    object-position: center center;
+}
+
+.section_img3 {
+    border-radius: 26% 74% 26% 74% / 60% 36% 64% 40%  ;
+    object-position: left bottom;
+}
+
+.section_img4 {
+    border-radius: 67% 33% 79% 21% / 22% 47% 53% 78% ;
+}
+
+.section_img5 {
+    border-radius: 54% 46% 59% 41% / 54% 54% 46% 46% ;
+    object-position: right bottom;
+}
+
+.section_img6 {
+    border-radius: 70% 30% 74% 26% / 74% 68% 32% 26% ;
+    object-position: center center;
+}
+
+.section_img7 {
+    border-radius: 26% 74% 26% 74% / 60% 36% 64% 40%  ;
+    object-position: left bottom;
+}
+
+.section_img8 {
+    border-radius: 65% 35% 87% 13% / 30% 80% 20% 70%  ;
+    transform: center center;
+}
+
+.section_paragraph {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.section_paragraph h3 {
+    text-align: center;
+    position: relative;
+}
+
+.section_paragraph h3 span {
+    display: inline-block;
+    width: 80%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #72B8FF;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section_paragraph_head{
+    width: 330px;
+    height: 160px;
+    text-align: center;
+    position: relative;
+    filter: drop-shadow(0px 0px 6px #777777);
+}
+
+.section_paragraph_head img {
+    width: 330px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section_paragraph_head h4 {
+    width: 100%;
+    font-size: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media screen and (min-width:480px) and (max-width:1024px) {
+    .section_imgs img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .section_paragraph_head {
+        transform: rotate(-10deg) translate(0,2vh);
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .section_box {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .section_imgs {
+        width: 50%;
+    }
+
+    .section_imgs img {
+        width: 50%;
+        transition: all 0.5s;
+    }
+
+    .section_imgs img:hover {
+        transform:translateY(-10px) scale(1.1,1.1);
+        border-radius: 20px ;
+    }
+
+    .section_paragraph {
+        width: 40%;
+    }
+
+    .section_paragraph_head {
+    transform: rotate(-10deg) translate(-30%,2vh);
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .js_fadeinIMG2 {
+        width: 0%;
+    }
+
+    /* 下線をのばすアニメーション */
+    .nobiru {
+        width: 0%;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: nobiruanime;
+    }
+    
+    @keyframes nobiruanime {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 80%;
+        }
+    }
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #72B8FF;
+    text-align: center;
+}
+
+small {
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* 戻るボタン */
+.top_btn {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 2%;
+    bottom: 12%;
+    z-index: 999999;
+    font-display: none;
+    opacity: 0;
+  }
+  
+  .top_btn img {
+    width: 80px;
+    margin: 3rem;
+  }
+  
+  .fadein_btn {
+    animation-name: fadeinAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeinAnime {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeout_btn {
+    animation-name: fadeoutAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+  }
+  
+  @keyframes fadeoutAnime {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  }
+  
+  .top_btn img:hover {
+    animation:bounce2 0.8s ease-out;
+  }
+  
+  @keyframes bounce2 {
+    0%    { transform:translate(0, 0); }
+    16.6% { transform:translate(0, -20px); animation-timing-function:ease-in; }
+    33.3% { transform:translate(0, 0); }
+    49.8% { transform:translate(0, -14px); animation-timing-function:ease-in; }
+    66.4% { transform:translate(0, 0); }
+    83%   { transform:translate(0, -4px); animation-timing-function:ease-in; }
+    100%  { transform:translate(0, 0); }
+  }
+
+/* 波の設定 */
+svg {
+    width: 100%;
+    height: 20vh;
+  }
