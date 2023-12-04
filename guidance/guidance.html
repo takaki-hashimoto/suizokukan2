@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIDANCE</title>
+    <link rel="stylesheet" href="./guidance.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header id="header">
+        <div class="header_top">
+            <div class="aquarium_logo">
+                <a href="../index.html"><img src="./guidance_img/apuarium_logo1.PNG" alt="alt"></a>
+            </div>
+            <div class="menu_btn respo" id="target" onclick="activebtn()">
+                <p>MENU</p><span class="span1"></span><span class="span2"></span>
+            </div>
+            <nav class="header_nav" id="nav_target">
+                <ul>
+                    <li><a href="#s_01"><img src="./guidance_img/time_icon.png" alt="alt">01/営業案内</a></li>
+                    <li><a href="#s_02"><img src="./guidance_img/fee_icon.png" alt="alt">02/入館料金</a></li>
+                    <li><a href="#s_03"><img src="./guidance_img/event_icon.png" alt="alt">03/イベント</a></li>
+                    <li><a href="#s_04"><img src="./guidance_img/coution_icon.png" alt="alt">04/注意事項</a></li>
+                    <li><a href="#s_05"><img src="./guidance_img/access_icon.png" alt="alt">05/アクセス</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_title_box">
+            <h1>GUIDANCE</h1>
+            <h3 class="original">///ご利用案内///</h3>
+            <h3 class="respo">~ご利用案内~</h3>
+        </div>
+        <div class="header_bottom"></div>
+    </header>
+
+    <main>
+        <!-- 利用案内 -->
+        <section id="time">
+            <div class="a_point" id="s_01">
+                <h1>01</h1>
+            </div>
+            <div class="space_img">
+                <h2>営業案内</h2>
+                <div class="animal_img right">
+                    <img src="./guidance_img/iwapenn.png" alt="alt">
+                </div>
+            </div>
+            <div class="time_box">
+                <div class="time_box_contrent">
+                    <div class="time_title">
+                        <p>開園時間</p>
+                    </div>
+                    <p>8:30~18:30</p>
+                </div>
+                <div class="time_box_contrent">
+                    <div class="time_title">
+                        <p>休館日</p>
+                    </div>
+                    <p>月曜日<br>
+                        (月曜日が祝日の場合は翌平日)</p>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <!-- カレンダー -->
+                <div id="c_wrapbox">
+                    <div id="c_wrap">
+                        <div class="title_btn">
+                            <div id="next-prev-button">
+                                <button id="prev" onclick="prev()">‹</button>
+                            </div>
+                            <h3 id="c_header"></h3>
+                            <div id="next-prev-button">
+                                <button id="next" class="resp" onclick="next()">›</button>
+                            </div>
+                        </div>
+                        <div id="calendar"></div>
+                    </div>
+                    <div id="c_wrap2">
+                        <div class="title_btn reverse">
+                            <div id="next-prev-button">
+                                <button id="next" onclick="next()">›</button>
+                            </div>
+                            <h3 id="c_header2"></h3>
+                        </div>
+                        <div id="calendar2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="description_box">
+                    <div class="color1"></div>
+                    <p>営業日</p>
+                </div>
+                <div class="description_box">
+                    <div class="color2"></div>
+                    <p>定休日</p>
+                </div>
+                <div class="description_box d_box3">
+                    <p>※<span>17:00</span>までにご入館ください。<br>※月曜日が祝日または振替休日の場合、翌平日が休園日です。</p>
+                </div>
+            </div>
+        </section>
+        <!-- 入館料金 -->
+        <section id="fee">
+            <div class="a_point" id="s_02">
+                <h1>02</h1>
+            </div>
+            <div class="space_img">
+                <h2>入館料金</h2>
+                <div class="animal_img left">
+                    <img src="./guidance_img/kame.png" alt="alt">
+                </div>
+            </div>
+            <div class="fee_box">
+                <div class="fee_content">
+                    <table class="fee_table">
+                        <tr>
+                            <th class="th1"></th>
+                            <td>一般</td>
+                            <td>団体</td>
+                            <td>前売り券</td>
+                            <td class="td_rt3">年間パスポート</td>
+
+                        </tr>
+                        <tr>
+                            <th>大人</th>
+                            <td>1500</td>
+                            <td>1000</td>
+                            <td>1000</td>
+                            <td>7500</td>
+                        </tr>
+                        <tr>
+                            <th>小・中学生</th>
+                            <td>1000円</td>
+                            <td>500</td>
+                            <td>500</td>
+                            <td>5000</td>
+                        </tr>
+                        <tr>
+                            <th class="th3">未就学児</th>
+                            <td>無料</td>
+                            <td>-</td>
+                            <td>無料</td>
+                            <td class="td_ru3">無料</td>
+                        </tr>
+                    </table>
+                    <p>※団体料金は<span>有料入園者30名以上</span>の場合に適応になります。<br>
+                        ※駐車料金は<span>無料</span>となっております。
+                    </p>
+                </div>
+                <div class="fee_textbox">
+                    <div class="fee_text">
+                        <h4>前売り券について</h4>
+                        <div class="under"></div>
+                        <p>北関東水族館窓口ににて販売しております。<br>
+                            コンビニエンスストアでも販売しておりますのでぜひご利用ください。<br>
+                            有効期限は購入翌日から無期限でご利用いただけます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- お得情報 -->
+        <section id="event">
+            <div class="a_point" id="s_03">
+                <h1>03</h1>
+            </div>
+            <div class="space_img">
+                <h2>イベント情報</h2>
+                <div class="animal_img right">
+                    <img src="./guidance_img/kawauso.png" alt="alt">
+                </div>
+            </div>
+            <div class="event_box">
+                <div class="event_iconbox iconbox">
+                    <div class="event_content_box">
+                        <div class="event_content_img e_content1">
+                            <img src="./guidance_img/child1.png" alt="alt">
+                        </div>
+                        <div class="event_content_text e_text1">
+                            <h2>Child<br>
+                                Free</h2>
+                        </div>
+                        <p>5/5こどもの日限定<br>
+                            小学生以下のお子様<br>
+                            入館料無料
+                        </p>
+                    </div>
+                    <div class="event_content_box">
+                        <div class="event_content_img e_content2">
+                            <img src="./guidance_img/dolf1.jpg" alt="alt">
+                        </div>
+                        <div class="event_content_text e_text2">
+                            <h2>Dolphin<br>
+                                Encounter</h2>
+                        </div>
+                        <p>5/3~5/6ゴールデン期間中<br>
+                            イルカとふれあい体験＆<br>
+                            ツーショット写真が取れる<br>
+                            ドルフィンチケット抽選会
+                        </p>
+                        <h5>期間中毎日限定10名様<br>
+                            抽選会は11:00~12:00に<br>
+                            イルカ水槽前で行います。</h5>
+                    </div>
+                    <div class="event_content_box">
+                        <div class="event_content_img e_content3">
+                            <img src="./guidance_img/pre1.png" alt="alt">
+                            <h1>?</h1>
+                        </div>
+                        <div class="event_content_text e_text3">
+                            <h2>Novelty<br>
+                                Present</h2>
+                        </div>
+                        <p>5/3~5/6ゴールデン期間中<br>
+                            毎日500番目に入館さされた<br>
+                            お客様に当館限定の<br>
+                            ノベルティをプレゼント<br>
+                            何がもらえるかは秘密
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 注意事項 -->
+        <section id="caution">
+            <div class="a_point" id="s_04">
+                <h1>04</h1>
+            </div>
+            <div class="space_img">
+                <h2>注意事項</h2>
+                <div class="animal_img left">
+                    <img src="./guidance_img/tako_kurage.png" alt="alt">
+                </div>
+            </div>
+            <div class="caution_box">
+                <div class="c_iconbox c_box1">
+                    <div class="c_content">
+                        <div class="c_img">
+                            <img src="./guidance_img/no_animal.png" alt="alt">
+                        </div>
+                        <div class="c_content_text">
+                            <p>ペット入館禁止</p>
+                        </div>
+                    </div>
+                    <div class="c_content">
+                        <div class="c_img">
+                            <img src="./guidance_img/no_beer.png" alt="alt">
+                        </div>
+                        <div class="c_content_text">
+                            <p>館内での飲酒禁止</p>
+                        </div>
+                    </div>
+                    <div class="c_content">
+                        <div class="c_img">
+                            <img src="./guidance_img/no_flash.png" alt="alt">
+                        </div>
+                        <div class="c_content_text">
+                            <p>フラッシュ禁止</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="c_iconbox c_box2">
+                    <div class="c_content">
+                        <div class="c_img">
+                            <img src="./guidance_img/no_paint.png" alt="alt">
+                        </div>
+                        <div class="c_content_text">
+                            <p>イタズラ禁止</p>
+                        </div>
+                    </div>
+                    <div class="c_content">
+                        <div class="c_img">
+                            <img src="./guidance_img/no_play.png" alt="alt">
+                        </div>
+                        <div class="c_content_text">
+                            <p>館内で遊ばない</p>
+                        </div>
+                    </div>
+                    <div class="c_content">
+                        <div class="c_img">
+                            <img src="./guidance_img/no_run.png" alt="alt">
+                        </div>
+                        <div class="c_content_text">
+                            <p>館内で走らない</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caution_text">
+                <p>迷子防止の為、お子様から目を話さないようにお願いいたします。<br>
+                    動物達に強いストレスを与えますので撮影時はフラッシュ機能をOFFにお願いします。<br></p>
+            </div>
+        </section>
+        <!-- アクセス -->
+        <section id="access">
+            <div class="a_point" id="s_05">
+                <h1>05</h1>
+            </div>
+            <div class="space_img">
+                <h2>アクセス</h2>
+                <div class="animal_img right">
+                    <img src="./guidance_img/white_kuma.png" alt="alt">
+                </div>
+            </div>
+            <div class="access_box">
+                <div class="access_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1457.8162411677813!2d141.35438868519458!3d43.049163581395185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2a27ee23ea55%3A0xdedc877edeaf642!2z5YyX6Zai5p2x5a2m6Zmi!5e0!3m2!1sja!2sjp!4v1699851395776!5m2!1sja!2sjp"
+                        width="800" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="access_text">
+                    <p>地下鉄中島公園駅から徒歩3分<br>
+                        1番出口から出ていただくと正面に見えます。</p>
+                </div>
+            </div>
+        </section>
+        <!-- フッター -->
+        <footer>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <path id="wave" d="" />
+            </svg>
+            <div class="copylight_box">
+                <h6>© All Rights Reserved. 北関東水族館</h6>
+            </div>
+        </footer>
+    </main>
+    <!--上に戻るボタン  -->
+    <div class="top_btn">
+        <a href="#header"><img src="./guidance_img/top_icon.PNG" alt="alt"></a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
